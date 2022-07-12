@@ -20,7 +20,6 @@ namespace csharp_ecommerce_db
 
 
         public List<Customer> Customers { get; set; }
-        public int ProductOrderQuantityId { get; set; }
-        public ProductOrderQuantity ProductOrderQuantity { get; set; }
+      
     }
 }

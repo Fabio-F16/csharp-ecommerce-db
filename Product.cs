@@ -22,7 +22,6 @@ namespace csharp_ecommerce_db
         public string Description { get; set; }
         public double Price { get; set; }
 
-        public int ProductOrderQuantityId { get; set; }
-        public ProductOrderQuantity ProductOrderQuantity { get; set; }
+      
     }
 }
