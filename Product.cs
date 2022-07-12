@@ -21,7 +21,7 @@ namespace csharp_ecommerce_db
         [MaxLength(600)]
         public string Description { get; set; }
         public double Price { get; set; }
+        public List<Order> Orders { get; set; }
 
-      
     }
 }
