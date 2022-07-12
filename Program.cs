@@ -9,6 +9,7 @@
             // Login();
             // InserimentoProdottoUtente();
             // InserisciOrdini();
+            ricercaOrdini();
 
 
             bool Login()
@@ -145,6 +146,34 @@
                         context.SaveChanges();
                     }
                 }
+            }
+
+            void ricercaOrdini()
+            {
+                Console.WriteLine("Inserisci il nome per effettuare la ricerca dell'ordine");
+                string nome = Console.ReadLine();
+
+                using(ECommerceContext context = new ECommerceContext())
+                {
+                    List<Customer> listaClienti = context.Customers.ToList<Customer>();
+                    //List<Order> listaOrdini = context.Orders.ToList<Order>();
+
+                    foreach(Customer customer in listaClienti)
+                    {
+                        if(nome == customer.Name)
+                        {
+                            Console.WriteLine("La lista dei tuoi ordini: ");
+                            List<Order> listaOrders = context.Orders.Where(order => order.CustomerId == customer.CustomerId).ToList<Order>();
+                            foreach(Order order in listaOrders)
+                            {
+                                Console.WriteLine("Id ordine: " + order.CustomerId);
+                                Console.WriteLine("Totale ordine: " + order.Amount);
+                            }
+                        }
+                    }
+                }
+
+                
             }
 
         }
