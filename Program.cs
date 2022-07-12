@@ -16,6 +16,18 @@
                 context.Add(prodotto2);
                 context.Add(prodotto3);
                 context.SaveChanges();
+
+
+                //Order ordine1 = new Order { Date = DateTime.Now, Amount = 19.99, Customers= 1 };
+
+                //Customer cliente1 = new Customer { Name = "Giorgio", Surname = "Giorgione", Email = "giorgione@giorgione.com" };
+                //Customer cliente2 = new Customer { Name = "Marcone", Surname = "Marcone", Email = "arcone@arcone.com" };
+                //context.Add(cliente1);
+                //context.Add(cliente2);
+                //context.SaveChanges();
+
+
+
             }
         }
     }

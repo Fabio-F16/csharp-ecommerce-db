@@ -15,7 +15,7 @@ namespace csharp_ecommerce_db
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }
 
-        public DbSet<ProductOrderQuantity> ProductOrderQuantity { get; set; }
+        public DbSet<QuantityProduct> QuantitiesProducts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

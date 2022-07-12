@@ -8,14 +8,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace csharp_ecommerce_db
 {
-    [Table("product_order_quantity")]
-    internal class ProductOrderQuantity
+    internal class QuantityProduct
     {
         [Key]
-        public int ProductOrderQuantityId { get; set; }
+        public int QuantityProductId { get; set; }
 
-        public int Quantity { get; set; }
-        public List<Product> products { get; set; }
-        public List<Order> orders { get; set; }
+        public int OrderId { get; set; }
+        public Order Order { get; set; }
+
+
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
     }
 }

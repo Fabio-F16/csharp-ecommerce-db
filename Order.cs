@@ -19,7 +19,10 @@ namespace csharp_ecommerce_db
         public string Status { get; set; }
 
 
-        public List<Customer> Customers { get; set; }
+        public int CustomerId { get; set; }
+        public Customer Customer { get; set; }
+
+        public List<QuantityProduct> Products { get; set; }
       
     }
 }
