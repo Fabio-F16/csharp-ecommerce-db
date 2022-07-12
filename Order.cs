@@ -23,6 +23,22 @@ namespace csharp_ecommerce_db
         public Customer Customer { get; set; }
 
         public List<Product> Products { get; set; }
+
+
+        public Order(Customer customer, List<Product> products)
+        {
+            this.Customer = customer;
+            this.CustomerId = customer.CustomerId;
+            foreach(Product product in products)
+            {
+                this.Amount += product.Price;
+            }
+        }
+
+        public Order()
+        {
+
+        }
       
     }
 }
